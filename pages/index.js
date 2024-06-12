@@ -1,6 +1,5 @@
-// pages/index.js
 import { useState, useEffect } from 'react';
-import { fetchUsers } from '../lib/api';
+import { fetchUsers } from '../Lib/Api';
 import styles from '../styles/Home.module.css';
 
 const ITEMS_PER_PAGE = 5;
@@ -29,7 +28,7 @@ const HomePage = ({ users, error }) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
-        setCurrentPage(1); // Reset to page 1 when search term changes
+        setCurrentPage(1);
     }, [searchTerm]);
 
     const filteredUsers = users.filter(user =>
